@@ -101,9 +101,9 @@ Generated files do not required license headers
 
 Unapproved licenses:
 
-  /scratch/hudson/workspace/jclouds-maven-site-1.4.0-rc.1/assemblies/src/main/resources/assemblies/jar-with-dependencies-descriptor.xml
-  /scratch/hudson/workspace/jclouds-maven-site-1.4.0-rc.1/assemblies/src/main/resources/assemblies/jar-with-dependencies-no-core-no-apis-descriptor.xml
   /scratch/hudson/workspace/jclouds-maven-site-1.4.0-rc.1/assemblies/src/main/resources/assemblies/package-descriptor.xml
+  /scratch/hudson/workspace/jclouds-maven-site-1.4.0-rc.1/assemblies/src/main/resources/assemblies/jar-with-dependencies-no-core-no-apis-descriptor.xml
+  /scratch/hudson/workspace/jclouds-maven-site-1.4.0-rc.1/assemblies/src/main/resources/assemblies/jar-with-dependencies-descriptor.xml
   /scratch/hudson/workspace/jclouds-maven-site-1.4.0-rc.1/assemblies/src/main/resources/assemblies/provided-dependencies-descriptor.xml
   /scratch/hudson/workspace/jclouds-maven-site-1.4.0-rc.1/assemblies/src/main/resources/assemblies/src-descriptor.xml
 
@@ -116,9 +116,9 @@ Archives:
   Binary files (which do not require AL headers) will be marked B
   Compressed archives will be marked A
   Notices, licenses etc will be marked N
- !????? /scratch/hudson/workspace/jclouds-maven-site-1.4.0-rc.1/assemblies/src/main/resources/assemblies/jar-with-dependencies-descriptor.xml
- !????? /scratch/hudson/workspace/jclouds-maven-site-1.4.0-rc.1/assemblies/src/main/resources/assemblies/jar-with-dependencies-no-core-no-apis-descriptor.xml
  !????? /scratch/hudson/workspace/jclouds-maven-site-1.4.0-rc.1/assemblies/src/main/resources/assemblies/package-descriptor.xml
+ !????? /scratch/hudson/workspace/jclouds-maven-site-1.4.0-rc.1/assemblies/src/main/resources/assemblies/jar-with-dependencies-no-core-no-apis-descriptor.xml
+ !????? /scratch/hudson/workspace/jclouds-maven-site-1.4.0-rc.1/assemblies/src/main/resources/assemblies/jar-with-dependencies-descriptor.xml
  !????? /scratch/hudson/workspace/jclouds-maven-site-1.4.0-rc.1/assemblies/src/main/resources/assemblies/provided-dependencies-descriptor.xml
  !????? /scratch/hudson/workspace/jclouds-maven-site-1.4.0-rc.1/assemblies/src/main/resources/assemblies/src-descriptor.xml
   AL    /scratch/hudson/workspace/jclouds-maven-site-1.4.0-rc.1/assemblies/pom.xml
@@ -127,74 +127,6 @@ Archives:
  Printing headers for files without AL header...
  
  
- =======================================================================
- ==/scratch/hudson/workspace/jclouds-maven-site-1.4.0-rc.1/assemblies/src/main/resources/assemblies/jar-with-dependencies-descriptor.xml
- =======================================================================
-&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;assembly&gt;
-    &lt;id&gt;jar-with-dependencies&lt;/id&gt;
-    &lt;formats&gt;
-        &lt;format&gt;jar&lt;/format&gt;
-    &lt;/formats&gt;
-    &lt;includeBaseDirectory&gt;false&lt;/includeBaseDirectory&gt;
-    &lt;dependencySets&gt;
-        &lt;dependencySet&gt;
-            &lt;unpack&gt;true&lt;/unpack&gt;
-            &lt;scope&gt;runtime&lt;/scope&gt;
-        &lt;/dependencySet&gt;
-    &lt;/dependencySets&gt;
-    &lt;fileSets&gt;
-        &lt;fileSet&gt;
-            &lt;directory&gt;${project.build.outputDirectory}&lt;/directory&gt;
-            &lt;outputDirectory /&gt;
-        &lt;/fileSet&gt;
-    &lt;/fileSets&gt;
-&lt;/assembly&gt;
-
- =======================================================================
- ==/scratch/hudson/workspace/jclouds-maven-site-1.4.0-rc.1/assemblies/src/main/resources/assemblies/jar-with-dependencies-no-core-no-apis-descriptor.xml
- =======================================================================
-&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;assembly&gt;
-    &lt;id&gt;jar-with-dependencies&lt;/id&gt;
-    &lt;formats&gt;
-        &lt;format&gt;jar&lt;/format&gt;
-    &lt;/formats&gt;
-    &lt;includeBaseDirectory&gt;false&lt;/includeBaseDirectory&gt;
-    &lt;dependencySets&gt;
-        &lt;dependencySet&gt;
-            &lt;unpack&gt;true&lt;/unpack&gt;
-            &lt;scope&gt;runtime&lt;/scope&gt;
-            &lt;excludes&gt;
-                &lt;exclude&gt;org.jclouds:jclouds-core&lt;/exclude&gt;
-                &lt;exclude&gt;org.jclouds:jclouds-blobstore&lt;/exclude&gt;
-                &lt;exclude&gt;org.jclouds:jclouds-compute&lt;/exclude&gt;
-                &lt;exclude&gt;org.jclouds:jclouds-loadbalancer&lt;/exclude&gt;
-                &lt;exclude&gt;org.jclouds.api:*&lt;/exclude&gt;
-                &lt;!-- excluding optional Clojure dependencies --&gt;
-                &lt;exclude&gt;org.clojure:clojure*&lt;/exclude&gt;
-            &lt;/excludes&gt;
-            &lt;!-- exclude all transitive dependencies of core too --&gt;
-            &lt;useTransitiveFiltering&gt;true&lt;/useTransitiveFiltering&gt;
-            &lt;useProjectArtifact&gt;false&lt;/useProjectArtifact&gt;
-        &lt;/dependencySet&gt;
-    &lt;/dependencySets&gt;
-    &lt;fileSets&gt;
-        &lt;fileSet&gt;
-            &lt;directory&gt;${project.build.outputDirectory}&lt;/directory&gt;
-            &lt;outputDirectory /&gt;
-        &lt;/fileSet&gt;
-        &lt;!-- Hack to get Maven assembly to build even if there are no files to include.
-          See http://jira.codehaus.org/browse/MASSEMBLY-457. --&gt;
-        &lt;fileSet&gt;
-            &lt;includes&gt;
-                &lt;include&gt;pom.xml&lt;/include&gt;
-            &lt;/includes&gt;
-            &lt;outputDirectory&gt;META-INF/maven/${project.groupId}/${project.artifactId}&lt;/outputDirectory&gt;
-        &lt;/fileSet&gt;
-    &lt;/fileSets&gt;
-&lt;/assembly&gt;
-
  =======================================================================
  ==/scratch/hudson/workspace/jclouds-maven-site-1.4.0-rc.1/assemblies/src/main/resources/assemblies/package-descriptor.xml
  =======================================================================
@@ -248,6 +180,74 @@ Archives:
             &lt;/includes&gt;
             &lt;filtered&gt;true&lt;/filtered&gt;
             &lt;outputDirectory /&gt;
+
+ =======================================================================
+ ==/scratch/hudson/workspace/jclouds-maven-site-1.4.0-rc.1/assemblies/src/main/resources/assemblies/jar-with-dependencies-no-core-no-apis-descriptor.xml
+ =======================================================================
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;assembly&gt;
+    &lt;id&gt;jar-with-dependencies&lt;/id&gt;
+    &lt;formats&gt;
+        &lt;format&gt;jar&lt;/format&gt;
+    &lt;/formats&gt;
+    &lt;includeBaseDirectory&gt;false&lt;/includeBaseDirectory&gt;
+    &lt;dependencySets&gt;
+        &lt;dependencySet&gt;
+            &lt;unpack&gt;true&lt;/unpack&gt;
+            &lt;scope&gt;runtime&lt;/scope&gt;
+            &lt;excludes&gt;
+                &lt;exclude&gt;org.jclouds:jclouds-core&lt;/exclude&gt;
+                &lt;exclude&gt;org.jclouds:jclouds-blobstore&lt;/exclude&gt;
+                &lt;exclude&gt;org.jclouds:jclouds-compute&lt;/exclude&gt;
+                &lt;exclude&gt;org.jclouds:jclouds-loadbalancer&lt;/exclude&gt;
+                &lt;exclude&gt;org.jclouds.api:*&lt;/exclude&gt;
+                &lt;!-- excluding optional Clojure dependencies --&gt;
+                &lt;exclude&gt;org.clojure:clojure*&lt;/exclude&gt;
+            &lt;/excludes&gt;
+            &lt;!-- exclude all transitive dependencies of core too --&gt;
+            &lt;useTransitiveFiltering&gt;true&lt;/useTransitiveFiltering&gt;
+            &lt;useProjectArtifact&gt;false&lt;/useProjectArtifact&gt;
+        &lt;/dependencySet&gt;
+    &lt;/dependencySets&gt;
+    &lt;fileSets&gt;
+        &lt;fileSet&gt;
+            &lt;directory&gt;${project.build.outputDirectory}&lt;/directory&gt;
+            &lt;outputDirectory /&gt;
+        &lt;/fileSet&gt;
+        &lt;!-- Hack to get Maven assembly to build even if there are no files to include.
+          See http://jira.codehaus.org/browse/MASSEMBLY-457. --&gt;
+        &lt;fileSet&gt;
+            &lt;includes&gt;
+                &lt;include&gt;pom.xml&lt;/include&gt;
+            &lt;/includes&gt;
+            &lt;outputDirectory&gt;META-INF/maven/${project.groupId}/${project.artifactId}&lt;/outputDirectory&gt;
+        &lt;/fileSet&gt;
+    &lt;/fileSets&gt;
+&lt;/assembly&gt;
+
+ =======================================================================
+ ==/scratch/hudson/workspace/jclouds-maven-site-1.4.0-rc.1/assemblies/src/main/resources/assemblies/jar-with-dependencies-descriptor.xml
+ =======================================================================
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;assembly&gt;
+    &lt;id&gt;jar-with-dependencies&lt;/id&gt;
+    &lt;formats&gt;
+        &lt;format&gt;jar&lt;/format&gt;
+    &lt;/formats&gt;
+    &lt;includeBaseDirectory&gt;false&lt;/includeBaseDirectory&gt;
+    &lt;dependencySets&gt;
+        &lt;dependencySet&gt;
+            &lt;unpack&gt;true&lt;/unpack&gt;
+            &lt;scope&gt;runtime&lt;/scope&gt;
+        &lt;/dependencySet&gt;
+    &lt;/dependencySets&gt;
+    &lt;fileSets&gt;
+        &lt;fileSet&gt;
+            &lt;directory&gt;${project.build.outputDirectory}&lt;/directory&gt;
+            &lt;outputDirectory /&gt;
+        &lt;/fileSet&gt;
+    &lt;/fileSets&gt;
+&lt;/assembly&gt;
 
  =======================================================================
  ==/scratch/hudson/workspace/jclouds-maven-site-1.4.0-rc.1/assemblies/src/main/resources/assemblies/provided-dependencies-descriptor.xml
