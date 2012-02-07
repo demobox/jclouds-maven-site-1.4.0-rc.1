@@ -45,7 +45,7 @@
 <a class="jxr_linenumber" name="35" href="#35">35</a>  <em class="jxr_javadoccomment"> * @author Adrian Cole</em>
 <a class="jxr_linenumber" name="36" href="#36">36</a>  <em class="jxr_javadoccomment"> */</em>
 <a class="jxr_linenumber" name="37" href="#37">37</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../org/jclouds/deltacloud/domain/Realm.html">Realm</a> {
-<a class="jxr_linenumber" name="38" href="#38">38</a>     <strong class="jxr_keyword">public</strong> enum <a href="../../../../org/jclouds/deltacloud/domain/Realm.html">State</a> {
+<a class="jxr_linenumber" name="38" href="#38">38</a>     <strong class="jxr_keyword">public</strong> enum <a href="../../../../org/jclouds/deltacloud/domain/Instance.html">State</a> {
 <a class="jxr_linenumber" name="39" href="#39">39</a>  
 <a class="jxr_linenumber" name="40" href="#40">40</a>        <em class="jxr_javadoccomment">/**</em>
 <a class="jxr_linenumber" name="41" href="#41">41</a>  <em class="jxr_javadoccomment">       * the realm is available</em>
@@ -62,7 +62,7 @@
 <a class="jxr_linenumber" name="52" href="#52">52</a>  <em class="jxr_javadoccomment">       */</em>
 <a class="jxr_linenumber" name="53" href="#53">53</a>        UNRECOGNIZED;
 <a class="jxr_linenumber" name="54" href="#54">54</a>  
-<a class="jxr_linenumber" name="55" href="#55">55</a>        <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../org/jclouds/deltacloud/domain/Realm.html">State</a> fromValue(String state) {
+<a class="jxr_linenumber" name="55" href="#55">55</a>        <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a href="../../../../org/jclouds/deltacloud/domain/Instance.html">State</a> fromValue(String state) {
 <a class="jxr_linenumber" name="56" href="#56">56</a>           <strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="57" href="#57">57</a>              <strong class="jxr_keyword">return</strong> valueOf(checkNotNull(state, <span class="jxr_string">"state"</span>));
 <a class="jxr_linenumber" name="58" href="#58">58</a>           } <strong class="jxr_keyword">catch</strong> (IllegalArgumentException e) {
@@ -75,9 +75,9 @@
 <a class="jxr_linenumber" name="65" href="#65">65</a>     @Nullable
 <a class="jxr_linenumber" name="66" href="#66">66</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> String limit;
 <a class="jxr_linenumber" name="67" href="#67">67</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> String name;
-<a class="jxr_linenumber" name="68" href="#68">68</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> <a href="../../../../org/jclouds/deltacloud/domain/Realm.html">State</a> state;
+<a class="jxr_linenumber" name="68" href="#68">68</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> <a href="../../../../org/jclouds/deltacloud/domain/Instance.html">State</a> state;
 <a class="jxr_linenumber" name="69" href="#69">69</a>  
-<a class="jxr_linenumber" name="70" href="#70">70</a>     <strong class="jxr_keyword">public</strong> <a href="../../../../org/jclouds/deltacloud/domain/Realm.html">Realm</a>(URI href, String id, String name, @Nullable String limit, <a href="../../../../org/jclouds/deltacloud/domain/Realm.html">State</a> state) {
+<a class="jxr_linenumber" name="70" href="#70">70</a>     <strong class="jxr_keyword">public</strong> <a href="../../../../org/jclouds/deltacloud/domain/Realm.html">Realm</a>(URI href, String id, String name, @Nullable String limit, <a href="../../../../org/jclouds/deltacloud/domain/Instance.html">State</a> state) {
 <a class="jxr_linenumber" name="71" href="#71">71</a>        <strong class="jxr_keyword">this</strong>.href = checkNotNull(href, <span class="jxr_string">"href"</span>);
 <a class="jxr_linenumber" name="72" href="#72">72</a>        <strong class="jxr_keyword">this</strong>.id = checkNotNull(id, <span class="jxr_string">"id"</span>);
 <a class="jxr_linenumber" name="73" href="#73">73</a>        <strong class="jxr_keyword">this</strong>.name = checkNotNull(name, <span class="jxr_string">"name"</span>);
@@ -124,7 +124,7 @@
 <a class="jxr_linenumber" name="114" href="#114">114</a> <em class="jxr_javadoccomment">    * </em>
 <a class="jxr_linenumber" name="115" href="#115">115</a> <em class="jxr_javadoccomment">    * @return indicator of the realm's current state</em>
 <a class="jxr_linenumber" name="116" href="#116">116</a> <em class="jxr_javadoccomment">    */</em>
-<a class="jxr_linenumber" name="117" href="#117">117</a>    <strong class="jxr_keyword">public</strong> <a href="../../../../org/jclouds/deltacloud/domain/Realm.html">State</a> getState() {
+<a class="jxr_linenumber" name="117" href="#117">117</a>    <strong class="jxr_keyword">public</strong> <a href="../../../../org/jclouds/deltacloud/domain/Instance.html">State</a> getState() {
 <a class="jxr_linenumber" name="118" href="#118">118</a>       <strong class="jxr_keyword">return</strong> state;
 <a class="jxr_linenumber" name="119" href="#119">119</a>    }
 <a class="jxr_linenumber" name="120" href="#120">120</a> 
