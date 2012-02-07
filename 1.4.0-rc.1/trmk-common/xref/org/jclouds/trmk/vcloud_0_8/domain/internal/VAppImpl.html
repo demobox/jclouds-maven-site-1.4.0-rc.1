@@ -53,7 +53,7 @@
 <a class="jxr_linenumber" name="43" href="#43">43</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> URI href;
 <a class="jxr_linenumber" name="44" href="#44">44</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> <a href="../../../../../../org/jclouds/trmk/vcloud_0_8/domain/ReferenceType.html">ReferenceType</a> vDC;
 <a class="jxr_linenumber" name="45" href="#45">45</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> Set&lt;ReferenceType&gt; extendedInfo;
-<a class="jxr_linenumber" name="46" href="#46">46</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> <a href="../../../../../../org/jclouds/trmk/vcloud_0_8/domain/Status.html">Status</a> status;
+<a class="jxr_linenumber" name="46" href="#46">46</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> <a href="../../../../../../org/jclouds/trmk/vcloud_0_8/domain/IpAddress.html">Status</a> status;
 <a class="jxr_linenumber" name="47" href="#47">47</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> Long size;
 <a class="jxr_linenumber" name="48" href="#48">48</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> ListMultimap&lt;String, String&gt; networkToAddresses;
 <a class="jxr_linenumber" name="49" href="#49">49</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> String operatingSystemDescription;
@@ -61,14 +61,14 @@
 <a class="jxr_linenumber" name="51" href="#51">51</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> Set&lt;ResourceAllocationSettingData&gt; resourceAllocations;
 <a class="jxr_linenumber" name="52" href="#52">52</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> Integer osType;
 <a class="jxr_linenumber" name="53" href="#53">53</a>  
-<a class="jxr_linenumber" name="54" href="#54">54</a>     <strong class="jxr_keyword">public</strong> <a href="../../../../../../org/jclouds/trmk/vcloud_0_8/domain/internal/VAppImpl.html">VAppImpl</a>(String name, URI href, <a href="../../../../../../org/jclouds/trmk/vcloud_0_8/domain/Status.html">Status</a> status, Long size, <a href="../../../../../../org/jclouds/trmk/vcloud_0_8/domain/ReferenceType.html">ReferenceType</a> vDC,
+<a class="jxr_linenumber" name="54" href="#54">54</a>     <strong class="jxr_keyword">public</strong> <a href="../../../../../../org/jclouds/trmk/vcloud_0_8/domain/internal/VAppImpl.html">VAppImpl</a>(String name, URI href, <a href="../../../../../../org/jclouds/trmk/vcloud_0_8/domain/IpAddress.html">Status</a> status, Long size, <a href="../../../../../../org/jclouds/trmk/vcloud_0_8/domain/ReferenceType.html">ReferenceType</a> vDC,
 <a class="jxr_linenumber" name="55" href="#55">55</a>              ListMultimap&lt;String, String&gt; networkToAddresses, Integer osType, String operatingSystemDescription,
 <a class="jxr_linenumber" name="56" href="#56">56</a>              VirtualSystemSettingData system, Set&lt;ResourceAllocationSettingData&gt; resourceAllocations) {
 <a class="jxr_linenumber" name="57" href="#57">57</a>         <strong class="jxr_keyword">this</strong>(name, href, status, size, vDC, networkToAddresses, osType, operatingSystemDescription, system,
 <a class="jxr_linenumber" name="58" href="#58">58</a>                 resourceAllocations, <strong class="jxr_keyword">new</strong> HashSet&lt;ReferenceType&gt;());
 <a class="jxr_linenumber" name="59" href="#59">59</a>     }
 <a class="jxr_linenumber" name="60" href="#60">60</a>  
-<a class="jxr_linenumber" name="61" href="#61">61</a>     <strong class="jxr_keyword">public</strong> <a href="../../../../../../org/jclouds/trmk/vcloud_0_8/domain/internal/VAppImpl.html">VAppImpl</a>(String name, URI href, <a href="../../../../../../org/jclouds/trmk/vcloud_0_8/domain/Status.html">Status</a> status, Long size, <a href="../../../../../../org/jclouds/trmk/vcloud_0_8/domain/ReferenceType.html">ReferenceType</a> vDC,
+<a class="jxr_linenumber" name="61" href="#61">61</a>     <strong class="jxr_keyword">public</strong> <a href="../../../../../../org/jclouds/trmk/vcloud_0_8/domain/internal/VAppImpl.html">VAppImpl</a>(String name, URI href, <a href="../../../../../../org/jclouds/trmk/vcloud_0_8/domain/IpAddress.html">Status</a> status, Long size, <a href="../../../../../../org/jclouds/trmk/vcloud_0_8/domain/ReferenceType.html">ReferenceType</a> vDC,
 <a class="jxr_linenumber" name="62" href="#62">62</a>              ListMultimap&lt;String, String&gt; networkToAddresses, Integer osType, String operatingSystemDescription,
 <a class="jxr_linenumber" name="63" href="#63">63</a>              VirtualSystemSettingData system, Set&lt;ResourceAllocationSettingData&gt; resourceAllocations,
 <a class="jxr_linenumber" name="64" href="#64">64</a>              Set&lt;ReferenceType&gt; extendedInfo) {
@@ -86,7 +86,7 @@
 <a class="jxr_linenumber" name="76" href="#76">76</a>     }
 <a class="jxr_linenumber" name="77" href="#77">77</a>  
 <a class="jxr_linenumber" name="78" href="#78">78</a>     @Override
-<a class="jxr_linenumber" name="79" href="#79">79</a>     <strong class="jxr_keyword">public</strong> <a href="../../../../../../org/jclouds/trmk/vcloud_0_8/domain/Status.html">Status</a> getStatus() {
+<a class="jxr_linenumber" name="79" href="#79">79</a>     <strong class="jxr_keyword">public</strong> <a href="../../../../../../org/jclouds/trmk/vcloud_0_8/domain/IpAddress.html">Status</a> getStatus() {
 <a class="jxr_linenumber" name="80" href="#80">80</a>        <strong class="jxr_keyword">return</strong> status;
 <a class="jxr_linenumber" name="81" href="#81">81</a>     }
 <a class="jxr_linenumber" name="82" href="#82">82</a>  
