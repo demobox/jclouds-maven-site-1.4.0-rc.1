@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd version="4.2.5" timestamp="2012-02-07T02:52:22.159">
+<file name="/scratch/hudson/workspace/jclouds-maven-site-1.4.0-rc.1/labs/virtualbox/src/main/java/org/jclouds/virtualbox/VirtualBoxPropertiesBuilder.java">
+<violation beginline="20" endline="84" begincolumn="1" endcolumn="2" rule="TooManyStaticImports" ruleset="Import Statement Rules" package="org.jclouds.virtualbox" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#TooManyStaticImports" priority="3">
+Too many static imports may lead to messy code
+</violation>
+</file>
+<file name="/scratch/hudson/workspace/jclouds-maven-site-1.4.0-rc.1/labs/virtualbox/src/main/java/org/jclouds/virtualbox/functions/IMachineToIpAddress.java">
+<violation beginline="72" endline="76" begincolumn="13" endcolumn="33" rule="CollapsibleIfStatements" ruleset="Basic Rules" package="org.jclouds.virtualbox.functions" class="IMachineToIpAddress" method="apply" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#CollapsibleIfStatements" priority="3">
+These nested if statements could be combined
+</violation>
+</file>
+<file name="/scratch/hudson/workspace/jclouds-maven-site-1.4.0-rc.1/labs/virtualbox/src/main/java/org/jclouds/virtualbox/functions/SendScancodes.java">
+<violation beginline="19" endline="79" begincolumn="1" endcolumn="1" rule="TooManyStaticImports" ruleset="Import Statement Rules" package="org.jclouds.virtualbox.functions" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#TooManyStaticImports" priority="3">
+Too many static imports may lead to messy code
+</violation>
+</file>
+<file name="/scratch/hudson/workspace/jclouds-maven-site-1.4.0-rc.1/labs/virtualbox/src/main/java/org/jclouds/virtualbox/functions/admin/ImageFromYamlStream.java">
+<violation beginline="60" endline="60" begincolumn="19" endcolumn="40" rule="UnusedPrivateMethod" ruleset="Unused Code Rules" package="org.jclouds.virtualbox.functions.admin" class="ImageFromYamlStream" method="construct" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateMethod" priority="3">
+Avoid unused private methods such as 'construct(String)'.
+</violation>
+</file>
+<file name="/scratch/hudson/workspace/jclouds-maven-site-1.4.0-rc.1/labs/virtualbox/src/main/java/org/jclouds/virtualbox/functions/admin/StartVBoxIfNotAlreadyRunning.java">
+<violation beginline="99" endline="100" begincolumn="10" endcolumn="72" rule="CollapsibleIfStatements" ruleset="Basic Rules" package="org.jclouds.virtualbox.functions.admin" class="StartVBoxIfNotAlreadyRunning" method="start" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#CollapsibleIfStatements" priority="3">
+These nested if statements could be combined
+</violation>
+</file>
+<file name="/scratch/hudson/workspace/jclouds-maven-site-1.4.0-rc.1/labs/virtualbox/src/main/java/org/jclouds/virtualbox/predicates/IMachinePredicates.java">
+<violation beginline="19" endline="70" begincolumn="1" endcolumn="1" rule="TooManyStaticImports" ruleset="Import Statement Rules" package="org.jclouds.virtualbox.predicates" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#TooManyStaticImports" priority="3">
+Too many static imports may lead to messy code
+</violation>
+</file>
+</pmd>
