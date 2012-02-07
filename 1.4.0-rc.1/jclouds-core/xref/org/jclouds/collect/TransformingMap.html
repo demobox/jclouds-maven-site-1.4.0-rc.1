@@ -91,11 +91,11 @@
 <a class="jxr_linenumber" name="81" href="#81">81</a>  
 <a class="jxr_linenumber" name="82" href="#82">82</a>     @Override
 <a class="jxr_linenumber" name="83" href="#83">83</a>     <strong class="jxr_keyword">public</strong> Set&lt;Entry&lt;K, V2&gt;&gt; entrySet() {
-<a class="jxr_linenumber" name="84" href="#84">84</a>        <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../org/jclouds/collect/TransformingMap.html">EntrySet</a>();
+<a class="jxr_linenumber" name="84" href="#84">84</a>        <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../org/jclouds/collect/InputSupplierMap.html">EntrySet</a>();
 <a class="jxr_linenumber" name="85" href="#85">85</a>  
 <a class="jxr_linenumber" name="86" href="#86">86</a>     }
 <a class="jxr_linenumber" name="87" href="#87">87</a>  
-<a class="jxr_linenumber" name="88" href="#88">88</a>     <strong class="jxr_keyword">class</strong> <a href="../../../org/jclouds/collect/TransformingMap.html">EntrySet</a> <strong class="jxr_keyword">extends</strong> AbstractSet&lt;Entry&lt;K, V2&gt;&gt; {
+<a class="jxr_linenumber" name="88" href="#88">88</a>     <strong class="jxr_keyword">class</strong> <a href="../../../org/jclouds/collect/InputSupplierMap.html">EntrySet</a> <strong class="jxr_keyword">extends</strong> AbstractSet&lt;Entry&lt;K, V2&gt;&gt; {
 <a class="jxr_linenumber" name="89" href="#89">89</a>        @Override
 <a class="jxr_linenumber" name="90" href="#90">90</a>        <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">int</strong> size() {
 <a class="jxr_linenumber" name="91" href="#91">91</a>           <strong class="jxr_keyword">return</strong> TransformingMap.<strong class="jxr_keyword">this</strong>.size();
